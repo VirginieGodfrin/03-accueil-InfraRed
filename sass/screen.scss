@@ -1,0 +1,237 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+
+@import "base";
+@import "compass/reset";
+@import "compass/css3";
+
+
+body{
+
+	font-family: $oxygen;
+	font-size: $fSMiddle;
+	line-height: 1.5em;
+
+	header{
+		display: none;
+	}
+
+	.titre{
+	    background: url("../img/titreBackground.jpg") ;
+	    @include bg_fix_cov;
+	    background-size: 100%;
+	    height: 1000px;
+	    text-align: center;
+		@include flex-row-cent;
+	    img{
+		    width: 30%;
+		    margin: auto;
+		}
+
+		@media screen and (max-width: $break-dk-norm){
+			height: 600px;
+    	}
+
+		@media screen and (max-width: $break-tab){
+			height: 350px;
+    	}
+
+		@media screen and (max-width: $break-phone){
+			height: 280px;
+    	}
+
+    }	
+
+	.box_rouge{
+	    display: flex;
+		flex-direction: column;
+		align-items: center;
+	    background-color: $red;
+	    height: auto;
+	    color: #fff;
+	    padding : 250px 0;
+
+	    h2{
+		    text-align: center;
+		    font-size: $fSbig;
+		    padding-bottom: 3%;
+		}
+
+		p {
+   			width: 50%;
+    		text-align: justify;
+		}
+
+		.bare_blanche{
+		    width:50px;
+		    height: 3px;
+		    background-color: #fff;
+		    margin: 30px 0;
+
+		}
+
+		@media screen and (max-width: $break-dk-norm){
+			line-height: 1.3em;
+			padding : 200px 0;
+			h2{
+			    font-size: $fSbig;
+			    padding-bottom: 10%;
+			}
+			p {
+	   			width: 60%;
+			}
+    	}
+
+		@media screen and (max-width: $break-tab){
+			line-height: 1.2em;
+			padding : 150px 0;
+			font-size: $fSlittle;
+			h2{
+			    font-size: $fSMiddle;
+			    padding-bottom: 10%;
+			}
+			p {
+	   			width: 70%;
+			}
+    	}
+
+		@media screen and (max-width: $break-phone){
+			line-height: 1em;
+			padding: 100px 0;
+			font-size: $fSlittle;
+			h2{
+			    font-size: $fSMiddle;
+			    padding-bottom: 20%;
+			}
+			p {
+	   			width: 80%;
+			}
+    	}
+	}
+	
+	.box_blanc{
+
+		.section_logo{
+		    width:20%;
+		    margin: 20px 0 40px 20px;
+		}
+
+		.section_div{
+		    display: flex;
+		    flex-direction: row;
+		    margin-left: 20%;
+		    margin-bottom: 10px;
+		    color: $red;
+
+		    .soixante{
+			    width:120px;
+			    height: 120px;
+			}
+
+			p{
+		    	padding: 3% 25% 3% 3%;
+		 	}
+
+		 	@media screen and (max-width: $break-dk-norm){
+				margin-left: 15%;
+				.soixante{
+			    	width: 110px;
+			    	height: 110px;
+			    }
+				p{
+			    	padding: 3% 21% 3% 3%;
+			 	}
+    		}
+
+			@media screen and (max-width: $break-tab){
+				margin-left: 10%;
+				.soixante{
+			    	width: 95px;
+			    	height: 95px;
+			    }
+				p{
+			    	padding: 3% 17% 3% 3%;
+			 	}
+    		}
+
+			@media screen and (max-width: $break-phone){
+				margin-left: 5%;
+				.soixante{
+			    	width: 80px;
+			    	height: 80px;
+			    }
+				p{
+			    	padding: 3% 10% 3% 3%;
+			 	}
+    		}
+		}
+
+	}
+
+	footer{
+	    background-color: $red;
+	    @include flex-row-around-cent;
+	    color: #fff;
+	    font-size: $fSlittle;
+	    line-height: 1.5em;
+	    height: 300px;
+
+	    .couriel{
+			margin-top: 5%;
+		    ul{
+			    list-style: none;
+			    display: flex;
+			    flex-direction: column;
+			}
+
+			li{
+	    		padding-bottom: 10px;
+			}
+
+			a{
+	    		vertical-align: top;
+	    		color: #fff;
+	    		text-decoration: none;
+			}
+		}
+
+		.postal{
+		    width: 200px;
+		    text-align: right;
+		    padding-bottom: 10px;
+		    align-self: flex-end;
+		}
+
+		@media screen and (max-width: $break-dk-norm){
+			height: 250px;
+			line-height: 1.5em;
+			.postal{
+			    padding-bottom: 20px;
+			}
+    	}
+
+		@media screen and (max-width: $break-tab){
+			height: 190px;
+			line-height: 1.2em;
+			.postal{
+			    padding-bottom: 20px;
+			}
+	
+    	}
+
+		@media screen and (max-width: $break-phone){
+			height: 150px;
+			line-height: 1.2em;
+			.postal{
+			    padding-bottom: 20px;
+			}
+    	}
+
+
+	}
+
+}
+

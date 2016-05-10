@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Oxygen);
+
+$oxygen: 'Oxygen', sans-serif;
+
+$red: #d81f1f; 
+$white: #fff;
+
+$fSbig: 24px;
+$fSMiddle: 18px;
+$fSlittle: 14px;
+
+$break-phone : 480px;
+$break-tab: 768px;
+$break-dk-norm: 992px;
+$break-dk-hd: 1200px;
+
+$big-height: 1500px;
+$litle-height: 400px;
+
+@mixin bg_fix_cov{
+	background-repeat: no-repeat;
+	background-position: top; 
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+@mixin bg_fix_cov_bot{
+	background-repeat: no-repeat;
+	background-position: bottom; 
+	background-attachment: scroll;
+	background-size: 100%;
+}
+
+@mixin bg_fix{
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+@mixin bg_scroll{
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: 100%;
+}
+
+@mixin bg_scroll_top{
+	background-repeat: no-repeat;
+	background-position: top; 
+	background-attachment: scroll;
+	background-size: 100%;
+}
+
+@mixin bg_fix_cov_cent{
+	background-repeat: no-repeat;
+	background-position: bottom; 
+	background-size: 100%;
+
+}
+
+@mixin flex-row-bet{
+	display: flex;
+	justify-content: space-between;
+}
+
+@mixin flex-row-bet-cent{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+
+@mixin flex-row-cent{
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+}
+
+@mixin flex-row-cent-end{
+	display: flex;
+	flex-direction: row;
+
+}
+
+@mixin flex-col-cent{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+@mixin flex-col{
+	display: flex;
+	flex-direction: column;
+	flex-wrap : nowrap;
+}
+
+@mixin flex-row-around-cent{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-content: center;
+}
+
+@mixin flex{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+}
